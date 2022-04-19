@@ -16,8 +16,8 @@ class NewVisitorTest(unittest.TestCase):
 
 
         #sheh notices the page title and header menthion to-do lists
-        self.assertIn('To-do',self.browser.title),"Browser title was :"+self.browser.title
-        sele.fail('Finish the test!')
+        self.assertIn('To-Do',self.browser.title),"Browser title was :"+self.browser.title
+        self.fail('Finish the test!')
 
 
 if __name__=='__main__':
