@@ -1,8 +1,8 @@
 from lists import views
-from django.urls import path
+from django.urls import path,re_path,include
+from lists import urls as list_urls
 
 urlpatterns = [
     path ('',views.home_page,name='home'),
-    path ('lists/the-only-list-in-the-world/',views.view_list,name='view_list'),
-    path ('lists/new',views.new_list,name='new_list'),
+    re_path (r'^lists/',include(list_urls)),
 ]
